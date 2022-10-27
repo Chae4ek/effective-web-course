@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Fapster app</title>
+    <link rel="icon" type="image/x-icon" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="styles/mobile-styles.css"
+      media="screen and (max-width: 1260px)"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <input id="header-input_menu" type="checkbox" />
+      <label class="header-hamburger" for="header-input_menu">
+        <span></span>
+      </label>
+      <a class="header-title non-selectable" href="#"><h3>Grid</h3></a>
+      <nav>
+        <a class="header-link header-link-current_page font-small_bold" href="#"
+          >How it works</a
+        >
+        <a class="header-link" href="#">Who we are</a>
+        <a class="header-link" href="#">What we do</a>
+        <a class="header-link" href="#">Contact us</a>
+      </nav>
+      <button id="button-sign_in" class="font-bold">Sign In</button>
+    </header>
+
+    <main>
+      <h1 class="main-title">
+        Combine <span class="text-highlighted_title">fine</span> images</h1
+      >
+      <h2 class="main-subtitle">To represent a product</h2>
+
+      <div class="main-cards_grid">
+        <div class="main-card" id="main-card1">
+          <p>
+            Use mixed grid with imagery, replace with your own photos and
+            descriptions</p
+          >
+        </div>
+        <div class="main-card main-filled_card" id="main-card2">
+          <p class="font-small_bold">
+            We aimed to deliver HQ templates for Figma</p
+          >
+          <span class="font-small">Used by 123 people</span>
+          <img
+            class="main-card_image non-selectable"
+            src="images/card-2.png"
+            alt="HQ templates for Figma"
+          />
+        </div>
+        <div class="main-card" id="main-card3">
+          <button class="h4" id="button-card_link">Learn more</button>
+        </div>
+        <div class="main-card main-filled_card" id="main-card4">
+          <img
+            class="main-card_image non-selectable"
+            src="images/card-4.png"
+            alt="Consider it done!"
+          />
+          <h3>Consider it done!</h3>
+        </div>
+        <div class="main-card" id="main-card5">
+          <p>
+            This is multipurpose grid, it fits for portfolio, services or agency
+            web site</p
+          >
+        </div>
+        <div class="main-card main-filled_card" id="main-card6">
+          <img
+            class="main-card_image non-selectable"
+            src="images/card-6.png"
+            alt="Letter 'A'"
+          />
+        </div>
+        <div class="main-card main-filled_card" id="main-card7">
+          <img
+            class="main-card_image non-selectable"
+            src="images/card-7.png"
+            alt="Sneaker"
+          />
+        </div>
+        <div class="main-card main-filled_card" id="main-card8">
+          <img
+            class="main-card_image non-selectable"
+            src="images/card-8.png"
+            alt="Book 'Change By Design' by Tim Brown"
+          />
+        </div>
+        <div class="main-card main-filled_card" id="main-card9">
+          <h3>See my goal?</h3>
+          <img
+            class="main-card_image non-selectable"
+            src="images/card-9.png"
+            alt="See my goal?"
+          />
+        </div>
+        <div class="main-card main-filled_card" id="main-card10">
+          <img
+            class="main-card_image non-selectable"
+            src="images/card-10.png"
+            alt="Building facade"
+          />
+        </div>
+      </div>
+
+      <h2 class="plan-title">Affordable pricing</h2>
+      <h4 class="plan-subtitle">
+        Bill me
+        <span id="button-monthly_plan" class="text-highlighted">monthly</span>
+        •
+        <span id="button-monthly_yearly">yearly</span>
+      </h4>
+
+      <div class="plan">
+        <section class="plan-card">
+          <h5 class="plan-type font-small_bold">Like a pussy</h5>
+          <p class="plan-price h3">
+            Free <span class="font-minicaps">/ forever</span>
+          </p>
+          <ul class="plan-advantages">
+            <li class="plan-free_advantage">Components-driven system</li>
+            <li class="plan-free_advantage">Sales-boosting landing pages</li>
+            <li class="plan-free_advantage">Awesome Feather icons pack</li>
+          </ul>
+          <button id="button-free_plan" class="font-small_bold">
+            Try for free
+          </button>
+        </section>
+        <section class="plan-card plan-best_card">
+          <h5 class="plan-type font-small_bold">
+            👤 Individual<span class="plan-badge font-minicaps">Best!</span>
+          </h5>
+          <p class="plan-price h3">
+            $24 <span class="font-minicaps">/ month</span>
+          </p>
+          <ul class="plan-advantages">
+            <li class="plan-month_advantage">Components-driven system</li>
+            <li class="plan-month_advantage">Sales-boosting landing pages</li>
+            <li class="plan-month_advantage">Awesome Feather icons pack</li>
+            <li class="plan-month_advantage">Themed into 3 different styles</li>
+            <li class="plan-month_advantage">Will help to learn Figma</li>
+          </ul>
+          <button id="button-month_plan" class="font-bold">
+            Regular license
+          </button>
+        </section>
+        <section class="plan-card">
+          <h5 class="plan-type font-small_bold">👥 Corporate</h5>
+          <p class="plan-price h3">
+            $12<span class="font-minicaps"> / editor</span>
+          </p>
+          <ul class="plan-advantages">
+            <li class="plan-editor_advantage">Components-driven system</li>
+            <li class="plan-editor_advantage">Sales-boosting landing pages</li>
+            <li class="plan-editor_advantage">Awesome Feather icons pack</li>
+            <li class="plan-editor_advantage"
+              >Themed into 3 different styles</li
+            >
+          </ul>
+          <button id="button-editor_plan" class="font-small_bold">
+            Extended license
+          </button>
+        </section>
+      </div>
+
+      <div class="info">
+        <h4 class="info-title">Delivering good designs since 1954 🚚💨</h4>
+        <p class="info-description font-big">
+          We're the first multi-purpose design kit solutions for businesses. We
+          help you bridge gaps between your layouts, templates and developers to
+          empower all involved.</p
+        >
+
+        <div class="info-cards">
+          <article class="info-card">
+            <i class="info-phone_call_icon"></i>
+            <h5 class="info-card_title font-bold">Support</h5>
+            <p class="info-card_description">
+              Delivering faster and more personalized support with shared
+              screens and cool design systems for Figma</p
+            >
+            <a class="info-link font-small_bold" href="#">Learn more</a>
+          </article>
+          <article class="info-card">
+            <i class="info-pie_chart_icon"></i>
+            <h5 class="info-card_title font-bold">Sales growth</h5>
+            <p class="info-card_description">
+              Identify qualified customers with easy-to-use live chat messaging
+              and AI-based Sales Bot</p
+            >
+            <a class="info-link font-small_bold" href="#">Learn more</a>
+          </article>
+          <article class="info-card">
+            <i class="info-zap_icon"></i>
+            <h5 class="info-card_title font-bold">Coponents-driven</h5>
+            <p class="info-card_description">
+              Delivering faster and more personalized support with shared
+              screens and cool design systems for Figma</p
+            >
+            <a class="info-link font-small_bold" href="#">Learn more</a>
+          </article>
+          <article class="info-card">
+            <i class="info-thumbs_up_icon"></i>
+            <h5 class="info-card_title font-bold">Swap the icon</h5>
+            <p class="info-card_description">
+              You can toggle to any icon within Instances and customize outlined
+              stroke to more bolder or lighter</p
+            >
+            <a class="info-link font-small_bold" href="#">Learn more</a>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-row_section">
+        <section class="footer-section">
+          <h5 class="footer-section_title font-minicaps">Follow us</h5>
+          <ul class="footer-share">
+            <li><a class="footer-icon footer-facebook_icon" href="#"></a></li>
+            <li><a class="footer-icon footer-linkedin_icon" href="#"></a></li>
+            <li><a class="footer-icon footer-slack_icon" href="#"></a></li>
+            <li><a class="footer-icon footer-twitter_icon" href="#"></a></li>
+          </ul>
+        </section>
+
+        <section class="footer-section">
+          <h5 class="footer-section_title font-minicaps">Follow us</h5>
+          <h4 class="footer-email">hello@fapsterapp.com</h4>
+        </section>
+      </div>
+
+      <div class="footer-row_section">
+        <section class="footer-section">
+          <h5 class="footer-section_title font-minicaps">Information</h5>
+          <ul class="footer-links">
+            <li>
+              <a class="footer-link font-small" href="#">About Fapster app</a>
+            </li>
+            <li>
+              <a class="footer-link font-small" href="#">Get in Touch</a>
+            </li>
+            <li>
+              <a class="footer-link font-small" href="#">Things We Like</a>
+            </li>
+            <li>
+              <a class="footer-link font-small" href="#"> Onhovered / Active</a>
+            </li>
+            <li>
+              <a class="footer-link font-small" href="#">Privacy Policy</a>
+            </li>
+            <li>
+              <a class="footer-link font-small" href="#">Terms of Service</a>
+            </li>
+            <li>
+              <a class="footer-link font-small" href="#">We are hiring!</a>
+            </li>
+            <li>
+              <a class="footer-link font-small" href="#">Resources</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="footer-section">
+          <h5 class="footer-section_title font-minicaps">Keep in touch</h5>
+          <div class="footer-inputs">
+            <input
+              class="font-default"
+              id="input-name"
+              type="text"
+              placeholder="Your name"
+            />
+            <i class="footer-user_icon"></i>
+            <input
+              class="font-default"
+              id="input-email"
+              type="email"
+              placeholder="E-mail"
+            />
+            <i class="footer-email_icon"></i>
+            <textarea
+              class="font-small_bold"
+              id="textarea-message"
+              name="message"
+              placeholder="Leave your message|"
+            ></textarea>
+            <i class="footer-edit_icon"></i>
+            <button id="button-send_email" class="font-bold">Send</button>
+          </div>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
