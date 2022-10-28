@@ -191,7 +191,6 @@
     margin-left: -16px;
     font-size: 20px;
     color: #fdcb6e;
-    pointer-events: none;
   }
 
   .header-link-current_page {
@@ -217,10 +216,11 @@
     opacity: 1;
   }
   #header-input_menu:checked ~ nav::before {
+    pointer-events: visible;
     backdrop-filter: blur(6px);
   }
   #header-input_menu:checked ~ nav > .header-link {
-    pointer-events: all;
+    pointer-events: initial;
     opacity: 1;
   }
 
