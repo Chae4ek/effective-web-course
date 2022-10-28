@@ -3,78 +3,78 @@
 
   h1,
   .h1 {
-    font-family: var(--main-font-family);
+    font-family: var(--primary-font-family);
     font-style: normal;
     font-weight: 900;
     font-size: 64px;
     line-height: 80px;
     letter-spacing: -1px;
-    color: var(--main-font-color);
+    color: var(--primary-font-color);
   }
 
   h2,
   .h2 {
-    font-family: var(--main-font-family);
+    font-family: var(--primary-font-family);
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
     line-height: 56px;
     letter-spacing: -1px;
-    color: var(--main-font-color);
+    color: var(--primary-font-color);
   }
 
   h3,
   .h3 {
-    font-family: var(--main-font-family);
+    font-family: var(--primary-font-family);
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 48px;
     letter-spacing: -0.5px;
-    color: var(--main-font-color);
+    color: var(--primary-font-color);
   }
 
   h4,
   .h4 {
-    font-family: var(--main-font-family);
+    font-family: var(--primary-font-family);
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 36px;
     letter-spacing: 0.25px;
-    color: var(--main-font-color);
+    color: var(--primary-font-color);
   }
 
   .font-big {
-    font-family: var(--main-font-family);
+    font-family: var(--primary-font-family);
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 32px;
-    color: var(--main-font-color);
+    color: var(--primary-font-color);
   }
 
   .font-bold {
-    font-family: var(--main-font-family);
+    font-family: var(--primary-font-family);
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 32px;
     letter-spacing: 0.2px;
-    color: var(--main-font-color);
+    color: var(--primary-font-color);
   }
 
   p,
   a,
   li,
   .font-default {
-    font-family: var(--main-font-family);
+    font-family: var(--primary-font-family);
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 24px;
     letter-spacing: 0.2px;
-    color: var(--main-font-color);
+    color: var(--primary-font-color);
   }
 
   /* Header */
@@ -150,7 +150,7 @@
     left: -50px;
     width: inherit;
     height: 100%;
-    background-color: #fff;
+    background-color: var(--primary-background-color);
     box-shadow: 2px 0 4px #26323829, 4px 0 8px #26323814;
     opacity: 0;
     transition: all 0.15s;

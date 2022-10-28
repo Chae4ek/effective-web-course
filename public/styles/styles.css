@@ -1,7 +1,13 @@
 :root {
-  --main-bg-color: #fff;
-  --main-font-family: 'Inter', sans-serif;
-  --main-font-color: #2d3436;
+  --primary-background-color: #fff;
+  --primary-font-family: 'Inter', sans-serif;
+  --primary-font-color: #2d3436;
+  --secondary-font-color: #6c5ce7;
+  --tertiary-font-color: #adadad;
+  --dark_primary-font-color: #fff;
+  --primary-button-color: #6c5ce7;
+  --secondary-button-color: #fff;
+  --tertiary-button-color: #adadad;
 }
 
 * {
@@ -16,7 +22,7 @@
 }
 
 html {
-  background-color: var(--main-bg-color);
+  background-color: var(--primary-background-color);
   height: 100%;
 }
 
@@ -38,109 +44,109 @@ button:hover {
 
 h1,
 .h1 {
-  font-family: var(--main-font-family);
+  font-family: var(--primary-font-family);
   font-style: normal;
   font-weight: 800;
   font-size: 96px;
   line-height: 104px;
   letter-spacing: -3px;
-  color: var(--main-font-color);
+  color: var(--primary-font-color);
 }
 
 h2,
 .h2 {
-  font-family: var(--main-font-family);
+  font-family: var(--primary-font-family);
   font-style: normal;
   font-weight: 900;
   font-size: 64px;
   line-height: 80px;
   letter-spacing: -1px;
-  color: var(--main-font-color);
+  color: var(--primary-font-color);
 }
 
 h3,
 .h3 {
-  font-family: var(--main-font-family);
+  font-family: var(--primary-font-family);
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
   line-height: 56px;
   letter-spacing: -1px;
-  color: var(--main-font-color);
+  color: var(--primary-font-color);
 }
 
 h4,
 .h4 {
-  font-family: var(--main-font-family);
+  font-family: var(--primary-font-family);
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
   line-height: 48px;
   letter-spacing: -0.5px;
-  color: var(--main-font-color);
+  color: var(--primary-font-color);
 }
 
 .font-big {
-  font-family: var(--main-font-family);
+  font-family: var(--primary-font-family);
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 36px;
   letter-spacing: -0.25px;
-  color: var(--main-font-color);
+  color: var(--primary-font-color);
 }
 
 .font-bold {
-  font-family: var(--main-font-family);
+  font-family: var(--primary-font-family);
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 36px;
   letter-spacing: 0.25px;
-  color: var(--main-font-color);
+  color: var(--primary-font-color);
 }
 
 p,
 a,
 li,
 .font-default {
-  font-family: var(--main-font-family);
+  font-family: var(--primary-font-family);
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 32px;
-  color: var(--main-font-color);
+  color: var(--primary-font-color);
 }
 
 .font-small_bold {
-  font-family: var(--main-font-family);
+  font-family: var(--primary-font-family);
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 32px;
   letter-spacing: 0.2px;
-  color: var(--main-font-color);
+  color: var(--primary-font-color);
 }
 
 .font-small {
-  font-family: var(--main-font-family);
+  font-family: var(--primary-font-family);
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.25px;
-  color: var(--main-font-color);
+  color: var(--primary-font-color);
 }
 
 .font-minicaps {
-  font-family: var(--main-font-family);
+  font-family: var(--primary-font-family);
   font-style: normal;
   font-weight: 800;
   font-size: 12px;
   line-height: 15px;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: var(--main-font-color);
+  color: var(--primary-font-color);
 }
 
 /* Header */
@@ -153,7 +159,7 @@ header {
   height: 64px;
   padding: 16px 0;
   box-shadow: 0 2px 4px #26323829, 0 4px 8px #26323814;
-  background-color: #fff;
+  background-color: var(--primary-background-color);
   z-index: 100;
 }
 
@@ -192,7 +198,7 @@ header > nav {
 .header-link {
   vertical-align: middle;
   text-decoration: none;
-  color: #6c5ce7;
+  color: var(--secondary-font-color);
 }
 .header-link:hover {
   text-decoration: underline;
@@ -220,8 +226,8 @@ header > nav {
   margin: 0 135px 0 33px;
   border: none;
   border-radius: 999px;
-  color: #fff;
-  background-color: #6c5ce7;
+  color: var(--dark_primary-font-color);
+  background-color: var(--primary-button-color);
 }
 
 /* Main */
@@ -304,11 +310,11 @@ main::before {
 }
 #main-card2 > p {
   margin-top: 42px;
-  color: #fff;
+  color: var(--dark_primary-font-color);
 }
 #main-card2 > span {
   margin-top: 2px;
-  color: #fff;
+  color: var(--dark_primary-font-color);
 }
 
 #main-card3 {
@@ -320,9 +326,9 @@ main::before {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: #6c5ce7;
+  background-color: var(--primary-button-color);
   border-radius: 999px;
-  color: #fff;
+  color: var(--dark_primary-font-color);
   text-decoration: none;
 }
 
@@ -333,7 +339,7 @@ main::before {
   align-items: flex-end;
 }
 #main-card4 > *:not(img) {
-  color: #fff;
+  color: var(--dark_primary-font-color);
   text-shadow: 0 4px 0 #000;
   margin-bottom: 18px;
 }
@@ -373,7 +379,7 @@ main::before {
   align-items: flex-start;
 }
 #main-card9 > *:not(img) {
-  color: #fff;
+  color: var(--dark_primary-font-color);
   text-shadow: 0 4px 0 #000;
   margin-top: 17px;
 }
@@ -389,7 +395,7 @@ main::before {
 
 .plan-subtitle {
   margin-top: 30px;
-  color: #adadad;
+  color: var(--tertiary-font-color);
 }
 
 #button-monthly_plan:hover,
@@ -400,7 +406,7 @@ main::before {
 .text-highlighted {
   display: inline-block;
   position: relative;
-  color: #6c5ce7;
+  color: var(--secondary-font-color);
   z-index: 0;
 }
 .text-highlighted::before {
@@ -424,7 +430,7 @@ main::before {
   border-radius: 16px;
   vertical-align: top;
   text-align: left;
-  background-color: #fff;
+  background-color: var(--primary-background-color);
   transition: box-shadow 0.2s;
 }
 .plan-card:hover {
@@ -446,7 +452,7 @@ main::before {
 }
 
 .plan-type {
-  color: #6c5ce7;
+  color: var(--secondary-font-color);
 }
 
 .plan-price {
@@ -481,10 +487,10 @@ main::before {
 #button-free_plan {
   margin-top: auto;
   height: 64px;
-  background-color: #fff;
-  border: 1px solid #adadad;
+  background-color: var(--secondary-button-color);
+  border: 1px solid var(--tertiary-button-color);
   border-radius: 16px;
-  color: #6c5ce7;
+  color: var(--secondary-font-color);
 }
 
 .plan-badge {
@@ -492,8 +498,9 @@ main::before {
   text-align: center;
   width: 72px;
   padding: 8px;
-  border: 1px solid #6c5ce7;
+  border: 1px solid var(--primary-button-color);
   border-radius: 99px;
+  background-color: var(--secondary-button-color);
 }
 
 .plan-month_advantage::before {
@@ -503,9 +510,9 @@ main::before {
 #button-month_plan {
   margin-top: auto;
   height: 64px;
-  background-color: #6c5ce7;
+  background-color: var(--primary-button-color);
   border-radius: 16px;
-  color: #fff;
+  color: var(--dark_primary-font-color);
   position: relative;
 }
 
@@ -516,10 +523,10 @@ main::before {
 #button-editor_plan {
   margin-top: auto;
   height: 64px;
-  background-color: #fff;
-  border: 1px solid #adadad;
+  background-color: var(--secondary-button-color);
+  border: 1px solid var(--tertiary-button-color);
   border-radius: 16px;
-  color: #6c5ce7;
+  color: var(--secondary-font-color);
 }
 
 .info {
@@ -614,8 +621,9 @@ main::before {
   align-items: center;
   width: 144px;
   height: 46px;
-  color: #6c5ce7;
-  border: 1px solid #adadad;
+  color: var(--secondary-font-color);
+  background-color: var(--secondary-button-color);
+  border: 1px solid var(--tertiary-button-color);
   border-radius: 16px;
 }
 
@@ -650,7 +658,7 @@ footer {
 
 .footer-section_title {
   align-self: flex-start;
-  color: #adadad;
+  color: var(--tertiary-font-color);
 }
 
 .footer-share {
@@ -689,7 +697,7 @@ footer {
 
 .footer-email {
   margin-top: 2px;
-  color: #6c5ce7;
+  color: var(--secondary-font-color);
 }
 
 .footer-links {
@@ -772,7 +780,7 @@ input::placeholder {
   background-color: #c2c2c23d;
   border: 2px solid #6c5ce73d;
   border-radius: 16px;
-  color: #6c5ce7;
+  color: var(--secondary-font-color);
   position: relative;
 }
 #textarea-message::placeholder {
@@ -796,8 +804,8 @@ input::placeholder {
   width: 168px;
   height: 80px;
   text-transform: uppercase;
-  color: #fff;
-  background-color: #6c5ce7;
+  color: var(--dark_primary-font-color);
+  background-color: var(--primary-button-color);
   box-shadow: 0px 8px 24px #2632381a, 0px 16px 32px #26323814;
   border-radius: 16px;
 }
