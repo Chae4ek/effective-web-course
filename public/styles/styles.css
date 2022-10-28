@@ -578,10 +578,10 @@ main::before {
 
 .info-phone_call_icon {
   background-color: #e84393;
-  will-change: transform;
 }
 .info-phone_call_icon::before {
   content: url(../images/phone-call.svg);
+  padding: 0 0 1px 1px;
 }
 
 .info-pie_chart_icon {
