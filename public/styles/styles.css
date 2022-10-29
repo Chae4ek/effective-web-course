@@ -554,7 +554,10 @@ main::before {
 }
 
 .info-card {
+  display: flex;
+  flex-direction: column;
   width: 270px;
+  height: 330px;
   min-width: 150px;
   margin: 40px 15px 0 15px;
 }
@@ -615,7 +618,7 @@ main::before {
 
 .info-link {
   display: inline-flex;
-  margin-top: 14px;
+  margin-top: auto;
   text-decoration: none;
   justify-content: center;
   align-items: center;
