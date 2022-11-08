@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.non-selectable {
+  cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+main {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 0;
+}
+
+.timer {
+  text-align: center;
+}
+
+.timer-button {
+  width: 120px;
+  height: 48px;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: #7998ffa4;
+}
+
+.timer-button:disabled {
+  background-color: #b6c7ffa4;
+}
+
+.timer-button:hover:not(:disabled) {
+  cursor: pointer;
+  background-color: #ef76ffa4;
+}
+
+.timer-button:active:not(:disabled) {
+  background-color: #ff73a1a4;
+}
+
+.timer-inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+}
+
+.timer-inputs > span {
+  font-size: 48px;
+}
+
+.timer-input {
+  margin: 0 10px;
+  width: 200px;
+  font-size: 32px;
+  border: 4px dashed #44444490;
+  border-radius: 10px;
+}
+
+.timer-input:disabled {
+  border-color: #afafaf90;
+}
+
+.timer-input:focus {
+  outline: none;
+}
+
+.body-time_is_up {
+  background-color: #ff7a7a;
+}
