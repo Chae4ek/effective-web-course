@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Timer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+
+  <body>
+    <main>
+      <div class="timer">
+        <button class="timer-button" id="button-preset_1">1 min</button>
+        <button class="timer-button" id="button-preset_2">5 min</button>
+        <button class="timer-button" id="button-preset_3">10 min</button>
+        <div class="timer-inputs">
+          <input type="text" class="timer-input" id="input-minutes" />
+          <span class="non-selectable">:</span>
+          <input type="text" class="timer-input" id="input-seconds" />
+        </div>
+        <button class="timer-button" id="button-start">Start</button>
+        <button class="timer-button" id="button-stop">Stop</button>
+        <button class="timer-button" id="button-reset">Reset</button>
+      </div>
+    </main>
+
+    <audio id="audio-time_is_up" loop src="static/timeIsUp.ogg"></audio>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
