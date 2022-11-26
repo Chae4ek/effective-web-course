@@ -42,8 +42,8 @@ export const Series = () => {
     <>
       <Header currentPage={3} title="Marvel | Series" />
       <Search
-        title="Comics"
-        placeholder="Search for Comics by Title"
+        title="Series"
+        placeholder="Search for Series by Title"
         cardList={series}
         onSearchEvent={switchTheme}
       />
