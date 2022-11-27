@@ -3,25 +3,16 @@ export interface PropsCard {
   title: string;
   description: string;
   imageUrl: string;
+  firstList: PropsLinkList;
+  secondList: PropsLinkList;
 }
 
-export interface Character {
-  id: number;
-  name: string;
-  description: string;
-  imageUrl: string;
-}
-
-export interface Comic {
-  id: number;
+export interface PropsLinkList {
   title: string;
-  description: string;
-  imageUrl: string;
+  links: PropsLink[];
 }
 
-export interface Series {
-  id: number;
+export interface PropsLink {
   title: string;
-  description: string;
-  imageUrl: string;
+  gateway: string;
 }
