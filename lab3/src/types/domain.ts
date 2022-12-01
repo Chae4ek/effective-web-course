@@ -1,5 +1,5 @@
 export interface PropsCard {
-  id: number;
+  id: string;
   title: string;
   description: string;
   imageUrl: string;
@@ -9,10 +9,11 @@ export interface PropsCard {
 
 export interface PropsLinkList {
   title: string;
+  baseUrl: string;
   links: PropsLink[];
 }
 
 export interface PropsLink {
   title: string;
-  gateway: string;
+  id: string | undefined;
 }

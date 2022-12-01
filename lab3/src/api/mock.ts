@@ -3,11 +3,11 @@ import { Character, Comic, Series } from '../types/models';
 const characterList = {
   items: [
     {
-      resourceURI: 'http://gateway.marvel.com/v1/public/characters/1009156',
+      resourceURI: 'http://gateway.marvel.com/v1/public/characters/1',
       name: 'Apocalypse'
     },
     {
-      resourceURI: 'http://gateway.marvel.com/v1/public/characters/1009197',
+      resourceURI: 'http://gateway.marvel.com/v1/public/characters/2',
       name: 'Blink'
     },
     {
@@ -28,11 +28,11 @@ const characterList = {
 const comicList = {
   items: [
     {
-      resourceURI: 'http://gateway.marvel.com/v1/public/comics/21366',
+      resourceURI: 'http://gateway.marvel.com/v1/public/comics/1',
       name: 'Avengers: The Initiative (2007) #14'
     },
     {
-      resourceURI: 'http://gateway.marvel.com/v1/public/comics/24571',
+      resourceURI: 'http://gateway.marvel.com/v1/public/comics/2',
       name: 'Avengers: The Initiative (2007) #14 (SPOTLIGHT VARIANT)'
     },
     {
@@ -49,7 +49,7 @@ const comicList = {
 const seriesList = {
   items: [
     {
-      resourceURI: 'http://gateway.marvel.com/v1/public/series/1945',
+      resourceURI: 'http://gateway.marvel.com/v1/public/series/1',
       name: 'Avengers: The Initiative (2007 - 2010)'
     },
     {

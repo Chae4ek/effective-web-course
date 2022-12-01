@@ -14,8 +14,15 @@ export abstract class CardsStore {
     makeObservable(this);
   }
 
-  getCardById(id: number) {
-    return this.cards.find((card) => card.id === id);
+  async getCardById(id: string) {
+    let cachedCard = this.cards.find((card) => card.id === id);
+
+    if (!cachedCard) {
+      await this.fetchStore(); // TODO: replace to fetching by id
+      cachedCard = this.cards.find((card) => card.id === id);
+    }
+
+    return cachedCard;
   }
 
   async fetchStore() {
@@ -43,7 +50,7 @@ class CharactersStore extends CardsStore {
     const list = await api.getCharactersList();
     return list.map(
       (character): PropsCard => ({
-        id: character.id,
+        id: character.id.toString(),
         title: character.name,
         description:
           character.description === ''
@@ -52,16 +59,18 @@ class CharactersStore extends CardsStore {
         imageUrl: `${character.thumbnail.path}.${character.thumbnail.extension}`,
         firstList: {
           title: 'Comics',
+          baseUrl: '/comics',
           links: character.comics.items.map((item) => ({
             title: item.name,
-            gateway: item.resourceURI
+            id: item.resourceURI.split('/').pop()
           }))
         },
         secondList: {
           title: 'Series',
+          baseUrl: '/series',
           links: character.series.items.map((item) => ({
             title: item.name,
-            gateway: item.resourceURI
+            id: item.resourceURI.split('/').pop()
           }))
         }
       })
@@ -74,7 +83,7 @@ class ComicsStore extends CardsStore {
     const list = await api.getComicsList();
     return list.map(
       (comic): PropsCard => ({
-        id: comic.id,
+        id: comic.id.toString(),
         title: comic.title,
         description:
           comic.description === ''
@@ -83,15 +92,20 @@ class ComicsStore extends CardsStore {
         imageUrl: `${comic.thumbnail.path}.${comic.thumbnail.extension}`,
         firstList: {
           title: 'Characters',
+          baseUrl: '/characters',
           links: comic.characters.items.map((item) => ({
             title: item.name,
-            gateway: item.resourceURI
+            id: item.resourceURI.split('/').pop()
           }))
         },
         secondList: {
           title: 'Series',
+          baseUrl: '/series',
           links: [
-            { title: comic.series.name, gateway: comic.series.resourceURI }
+            {
+              title: comic.series.name,
+              id: comic.series.resourceURI.split('/').pop()
+            }
           ]
         }
       })
@@ -104,7 +118,7 @@ class SeriesStore extends CardsStore {
     const list = await api.getSeriesList();
     return list.map(
       (series): PropsCard => ({
-        id: series.id,
+        id: series.id.toString(),
         title: series.title,
         description:
           series.description === ''
@@ -113,16 +127,18 @@ class SeriesStore extends CardsStore {
         imageUrl: `${series.thumbnail.path}.${series.thumbnail.extension}`,
         firstList: {
           title: 'Characters',
+          baseUrl: '/characters',
           links: series.characters.items.map((item) => ({
             title: item.name,
-            gateway: item.resourceURI
+            id: item.resourceURI.split('/').pop()
           }))
         },
         secondList: {
           title: 'Comics',
+          baseUrl: '/comics',
           links: series.comics.items.map((item) => ({
             title: item.name,
-            gateway: item.resourceURI
+            id: item.resourceURI.split('/').pop()
           }))
         }
       })
