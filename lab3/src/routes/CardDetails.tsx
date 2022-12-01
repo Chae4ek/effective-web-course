@@ -11,14 +11,15 @@ import styles from './styles/CardDetails.module.scss';
 import { useEffect, useState } from 'react';
 import Loading from './Loading';
 import Empty from './Empty';
+import routes from '../config/routes';
 
 export default function CardDetails() {
   const store: CardsStore = (() => {
-    const location = useLocation();
-    if (/^[/]characters/.test(location.pathname)) return charactersStore;
-    if (/^[/]comics/.test(location.pathname)) return comicsStore;
-    if (/^[/]series/.test(location.pathname)) return seriesStore;
-    throw new Error(`unknown location: "${location.pathname}"`);
+    const { pathname } = useLocation();
+    if (RegExp(`^${routes.characters}`).test(pathname)) return charactersStore;
+    if (RegExp(`^${routes.comics}`).test(pathname)) return comicsStore;
+    if (RegExp(`^${routes.series}`).test(pathname)) return seriesStore;
+    throw new Error(`unknown location: "${pathname}"`);
   })();
 
   const { id } = useParams();

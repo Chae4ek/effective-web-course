@@ -5,6 +5,7 @@ import { FC, lazy, ReactNode, Suspense } from 'react';
 import Characters from './Characters';
 import Loading from './Loading';
 import Empty from './Empty';
+import routes from '../config/routes';
 
 const CardDetails = lazy(() => import('./CardDetails'));
 const Comics = lazy(() => import('./Comics'));
@@ -23,12 +24,12 @@ export default function Root() {
       element: <Layout />,
       children: [
         { index: true, element: <Empty /> },
-        { path: 'characters', element: <Lazy node={<Characters />} /> },
-        { path: 'characters/:id', element: cardDetails },
-        { path: 'comics', element: <Lazy node={<Comics />} /> },
-        { path: 'comics/:id', element: cardDetails },
-        { path: 'series', element: <Lazy node={<Series />} /> },
-        { path: 'series/:id', element: cardDetails },
+        { path: routes.characters, element: <Lazy node={<Characters />} /> },
+        { path: `${routes.characters}/:id`, element: cardDetails },
+        { path: routes.comics, element: <Lazy node={<Comics />} /> },
+        { path: `${routes.comics}/:id`, element: cardDetails },
+        { path: routes.series, element: <Lazy node={<Series />} /> },
+        { path: `${routes.series}/:id`, element: cardDetails },
         { path: '*', element: <Navigate replace to="/" /> }
       ]
     }

@@ -2,6 +2,7 @@ import { CardList } from '../components/Card';
 import { switchTheme } from '../themes/themes';
 import { Search } from '../components/Search';
 import { comicsStore } from '../store/CardsStore';
+import routes from '../config/routes';
 
 export default function Comics() {
   comicsStore.fetchStore();
@@ -14,7 +15,7 @@ export default function Comics() {
         store={comicsStore}
         onSearchEvent={switchTheme}
       />
-      <CardList store={comicsStore} basePath="/comics" />
+      <CardList store={comicsStore} basePath={routes.comics} />
     </>
   );
 }

@@ -1,6 +1,7 @@
 import { observable, makeObservable, runInAction } from 'mobx';
 
 import api from '../api/api';
+import routes from '../config/routes';
 import { PropsCard } from '../types/domain';
 
 export abstract class CardsStore {
@@ -59,7 +60,7 @@ class CharactersStore extends CardsStore {
         imageUrl: `${character.thumbnail.path}.${character.thumbnail.extension}`,
         firstList: {
           title: 'Comics',
-          baseUrl: '/comics',
+          baseUrl: routes.comics,
           links: character.comics.items.map((item) => ({
             title: item.name,
             id: item.resourceURI.split('/').pop()
@@ -67,7 +68,7 @@ class CharactersStore extends CardsStore {
         },
         secondList: {
           title: 'Series',
-          baseUrl: '/series',
+          baseUrl: routes.series,
           links: character.series.items.map((item) => ({
             title: item.name,
             id: item.resourceURI.split('/').pop()
@@ -92,7 +93,7 @@ class ComicsStore extends CardsStore {
         imageUrl: `${comic.thumbnail.path}.${comic.thumbnail.extension}`,
         firstList: {
           title: 'Characters',
-          baseUrl: '/characters',
+          baseUrl: routes.characters,
           links: comic.characters.items.map((item) => ({
             title: item.name,
             id: item.resourceURI.split('/').pop()
@@ -100,7 +101,7 @@ class ComicsStore extends CardsStore {
         },
         secondList: {
           title: 'Series',
-          baseUrl: '/series',
+          baseUrl: routes.series,
           links: [
             {
               title: comic.series.name,
@@ -127,7 +128,7 @@ class SeriesStore extends CardsStore {
         imageUrl: `${series.thumbnail.path}.${series.thumbnail.extension}`,
         firstList: {
           title: 'Characters',
-          baseUrl: '/characters',
+          baseUrl: routes.characters,
           links: series.characters.items.map((item) => ({
             title: item.name,
             id: item.resourceURI.split('/').pop()
@@ -135,7 +136,7 @@ class SeriesStore extends CardsStore {
         },
         secondList: {
           title: 'Comics',
-          baseUrl: '/comics',
+          baseUrl: routes.comics,
           links: series.comics.items.map((item) => ({
             title: item.name,
             id: item.resourceURI.split('/').pop()

@@ -2,6 +2,7 @@ import { Search } from '../components/Search';
 import { CardList } from '../components/Card';
 import { switchTheme } from '../themes/themes';
 import { charactersStore } from '../store/CardsStore';
+import routes from '../config/routes';
 
 export default function Characters() {
   charactersStore.fetchStore();
@@ -14,7 +15,7 @@ export default function Characters() {
         store={charactersStore}
         onSearchEvent={switchTheme}
       />
-      <CardList store={charactersStore} basePath="/characters" />
+      <CardList store={charactersStore} basePath={routes.characters} />
     </>
   );
 }
