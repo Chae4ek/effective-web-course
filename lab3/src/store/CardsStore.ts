@@ -63,7 +63,7 @@ class CharactersStore extends CardsStore {
           baseUrl: routes.comics,
           links: character.comics.items.map((item) => ({
             title: item.name,
-            id: item.resourceURI.split('/').pop()
+            id: item.resourceURI.split('/').pop() ?? 'unknown_id'
           }))
         },
         secondList: {
@@ -71,7 +71,7 @@ class CharactersStore extends CardsStore {
           baseUrl: routes.series,
           links: character.series.items.map((item) => ({
             title: item.name,
-            id: item.resourceURI.split('/').pop()
+            id: item.resourceURI.split('/').pop() ?? 'unknown_id'
           }))
         }
       })
@@ -96,7 +96,7 @@ class ComicsStore extends CardsStore {
           baseUrl: routes.characters,
           links: comic.characters.items.map((item) => ({
             title: item.name,
-            id: item.resourceURI.split('/').pop()
+            id: item.resourceURI.split('/').pop() ?? 'unknown_id'
           }))
         },
         secondList: {
@@ -105,7 +105,7 @@ class ComicsStore extends CardsStore {
           links: [
             {
               title: comic.series.name,
-              id: comic.series.resourceURI.split('/').pop()
+              id: comic.series.resourceURI.split('/').pop() ?? 'unknown_id'
             }
           ]
         }
@@ -131,7 +131,7 @@ class SeriesStore extends CardsStore {
           baseUrl: routes.characters,
           links: series.characters.items.map((item) => ({
             title: item.name,
-            id: item.resourceURI.split('/').pop()
+            id: item.resourceURI.split('/').pop() ?? 'unknown_id'
           }))
         },
         secondList: {
@@ -139,7 +139,7 @@ class SeriesStore extends CardsStore {
           baseUrl: routes.comics,
           links: series.comics.items.map((item) => ({
             title: item.name,
-            id: item.resourceURI.split('/').pop()
+            id: item.resourceURI.split('/').pop() ?? 'unknown_id'
           }))
         }
       })

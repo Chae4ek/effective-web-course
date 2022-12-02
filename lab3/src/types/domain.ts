@@ -15,5 +15,5 @@ export interface PropsLinkList {
 
 export interface PropsLink {
   title: string;
-  id: string | undefined;
+  id: string;
 }
