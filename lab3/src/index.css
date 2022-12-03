@@ -15,10 +15,31 @@ body,
   flex-direction: column;
 }
 
+main {
+  flex: 1 0 auto;
+}
+
 :root {
   background-color: var(--main_background_color);
 }
 
 img {
   font-size: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main_tertiary_link_color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--main_secondary_link_color);
+}
+
+a:link {
+  color: var(--main_primary_link_color);
 }

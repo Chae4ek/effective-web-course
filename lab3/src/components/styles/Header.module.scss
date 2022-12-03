@@ -45,6 +45,9 @@ header {
   &:hover {
     text-decoration: underline;
   }
+  &:active {
+    color: var(--header_tertiary_font_color);
+  }
 }
 
 .header_link__current_page {

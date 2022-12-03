@@ -1,25 +1,24 @@
 import { FC } from 'react';
 import styles from './styles/Search.module.scss';
 import { PropsCard } from '../types/domain';
+import { CardsStore } from '../store/CardsStore';
+import { observer } from 'mobx-react-lite';
 
-interface Props {
+export const Search: FC<{
   title: string;
   placeholder: string;
-  cardList: PropsCard[];
+  store: CardsStore;
   onSearchEvent: (foundCards: PropsCard[]) => void;
-}
+}> = ({ title, placeholder, store, onSearchEvent }) => {
+  const CardListLengthView = observer<{ store: CardsStore }>(({ store }) => (
+    <span>{` (${store.cards.length})`}</span>
+  ));
 
-export const Search: FC<Props> = ({
-  title,
-  placeholder,
-  cardList,
-  onSearchEvent
-}) => {
   return (
     <div className={styles.search}>
       <h1 className={styles.search_title}>
         {title}
-        <span>{` (${cardList.length})`}</span>
+        <CardListLengthView store={store} />
       </h1>
       <div className={styles.search_interface}>
         <input
@@ -29,7 +28,7 @@ export const Search: FC<Props> = ({
         />
         <button
           className={styles.search_button}
-          onClick={() => onSearchEvent(cardList)}
+          onClick={() => onSearchEvent(store.cards)}
         >
           Search
         </button>
